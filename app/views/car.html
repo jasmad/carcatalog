@@ -1,0 +1,35 @@
+<div class="jumbotron">
+  	<h1>{{car.brand}} {{car.model}} {{car.year}}</h1>
+  	<div class="thumbnail">
+		<img class="img-responsive" src="images/{{car.img}}" alt="{{car.brand}} {{car.model}} - {{car.year}}">
+		<div class="caption">
+			<h3>Specs</h3>
+			<ul>
+				<li>
+					<label for="">Brand: </label>
+					{{car.brand}}
+				</li>
+				<li>
+					<label for="">Model: </label>
+					{{car.model}}
+				</li>
+				<li>
+					<label for="">Year: </label>
+					{{car.year}}
+				</li>
+				<li>
+					<label for="">Price: </label>
+					{{car.price}}
+				</li>
+			</ul>
+		</div>
+	</div>
+  	<p><a class="btn btn-lg btn-success" ng-href="#/compare">Compare<span class="glyphicon glyphicon-ok"></span></a></p>
+</div> 
+
+			
+
+<!-- <div class="row marketing">
+  <p>Price: {{car.price}}</p>
+  <p>{{car.description}}</p>
+</div> -->

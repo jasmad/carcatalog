@@ -1,0 +1,38 @@
+{
+    "cars": [{
+        "code": "b05dbf3b-ca13-4c0e-becf-c534c201f1ec",
+        "brand": "Porsche",
+        "model": "911",
+        "price": 135000,
+        "year":2004,
+        "img": "2004_silver_Porsche_911_Carrera_type_997.jpg"
+    },{
+        "code": "b05dbf3b-ca13-4c0e-becf-c534c201asec",
+        "brand": "Nissan",
+        "model": "GT-R",
+        "price": 80000,
+        "year":2012,
+        "img": "Nissan_GT-R_-_CIAS_2012.jpg"
+    },{
+        "code": "b05dbf3b-ca13-4c0e-becf-0as34c201f1ec",
+        "brand": "BMW",
+        "model": "M3",
+        "price": 60500,
+        "year":2012,
+        "img": "BMW_M3_E92.jpg"
+    },{
+        "code": "b05dbf3b-ca13-4c0e-becf-c534c0a9sff1ec",
+        "brand": "Audi",
+        "model": "S5",
+        "price": 53000,
+        "year":2008,
+        "img": "Audi_S5_rear_20080703.jpg"
+    },{
+        "code": "b05dbf3b-ca13-4c0e-becf-c53a09sdgh81f1ec",
+        "brand": "Audi",
+        "model": "TT",
+        "price": 40000,
+        "year":2007,
+        "img": "Audi_TTS_Glutorange.jpg"
+    }]
+}

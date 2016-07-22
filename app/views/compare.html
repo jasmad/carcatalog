@@ -1,0 +1,20 @@
+<div class="row">
+      <div class="col-lg-12">
+      	<h1 class="page-header">Car Catalog</h1>
+      </div>
+      <div ng-repeat="car in carComparisonList" class="col-sm-6 col-md-4 car-thumb">
+      		<div class="thumbnail">
+		      <img class="img-responsive" src="{{car.image}}" alt="">
+		      <div class="caption">
+		        <h3>{{car.name}}</h3>
+		        <p>
+		        	
+		        </p>
+		        <p>
+		        	<a href="#/cars/{{car.code}}" class="btn btn-primary" role="button">More about this car</a> 
+		        	<a href="#" class="btn btn-default" role="button">Compare</a>
+		        </p>
+		      </div>
+		    </div>
+      </div>
+</div>
