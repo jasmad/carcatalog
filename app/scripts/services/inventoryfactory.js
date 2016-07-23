@@ -42,6 +42,21 @@ angular.module('carCatalogApp')
             deferred.reject("Error: request returned status " + status);
           });
           return deferred.promise;
+      },
+      getCarsByCodes: function (codes) {
+        var deferred = $q.defer();
+        $http.get('scripts/data/car-companies.json')
+          .success(function(data){
+            // {code: "b05dbf3b-ca13-4c0e-becf-c534c201f1ec"}
+            var filteredCar = filterFilter(data.cars, function(car, index, carList){
+              return codes.indexOf(car.code) > -1;
+            });
+            deferred.resolve(filteredCar);
+          })
+          .error(function(data, status, headers, config) {
+            deferred.reject("Error: request returned status " + status);
+          });
+          return deferred.promise;
       }
     };
   });

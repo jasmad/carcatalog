@@ -30,7 +30,22 @@ angular
         controller: 'CarCtrl',
         controllerAs: 'Car'
       })
-      .when('/compare', {
+      .when('/compare/', {
+        templateUrl: 'views/compare.html',
+        controller: 'CompareCtrl',
+        controllerAs: 'compare'
+      })
+      .when('/compare/:code/', {
+        templateUrl: 'views/compare.html',
+        controller: 'CompareCtrl',
+        controllerAs: 'compare'
+      })
+      .when('/compare/:code/:code2?/', {
+        templateUrl: 'views/compare.html',
+        controller: 'CompareCtrl',
+        controllerAs: 'compare'
+      })
+      .when('/compare/:code/:code2?/:code3?/', {
         templateUrl: 'views/compare.html',
         controller: 'CompareCtrl',
         controllerAs: 'compare'

@@ -9,9 +9,8 @@
  */
 angular.module('carCatalogApp')
   .controller('CarlistCtrl', function ($scope, $timeout, InventoryFactory) {
-    console.log('CarlistCtrl');
+    $scope.carList = [];
     InventoryFactory.getCarList().then(function(carList){
-    	console.log("data", carList);
     	$timeout(function() {
     		$scope.carList = carList;
     	});

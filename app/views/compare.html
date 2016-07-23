@@ -1,20 +1,43 @@
 <div class="row">
       <div class="col-lg-12">
-      	<h1 class="page-header">Car Catalog</h1>
+      	<h1 class="page-header">Car Comparison</h1>
       </div>
       <div ng-repeat="car in carComparisonList" class="col-sm-6 col-md-4 car-thumb">
-      		<div class="thumbnail">
-		      <img class="img-responsive" src="{{car.image}}" alt="">
-		      <div class="caption">
-		        <h3>{{car.name}}</h3>
-		        <p>
-		        	
-		        </p>
-		        <p>
-		        	<a href="#/cars/{{car.code}}" class="btn btn-primary" role="button">More about this car</a> 
-		        	<a href="#" class="btn btn-default" role="button">Compare</a>
-		        </p>
-		      </div>
-		    </div>
+      		<h6 class="compare-title">Compare With: </h6>
+			<div class="thumbnail search-comparison">
+				<input type="text" ng-model="search" placeholder="Search here">
+				<ul class="search-car-list">
+					<li ng-repeat="car in carSearchList | filter: search | orderBy: 'brand' ">
+						<a href="#" ng-click="refreshComparision($parent.$index, car.code); $event.preventDefault(); $event.stopPropagation();">
+							{{car.brand}} {{car.model}} {{car.year}}
+						</a>
+					</li>
+				</ul>
+			</div>
+      		<h1 class="car-title" ng-if="car.code">{{car.brand}} {{car.model}} {{car.year}}</h1>
+		  	<div ng-if="car.code" class="thumbnail">
+				<img ng-if="car.img" class="img-responsive" src="images/{{car.img}}" alt="{{car.brand}} {{car.model}} - {{car.year}}">
+				<div class="caption">
+					<h3>Specs</h3>
+					<ul>
+						<li>
+							<label for="">Brand: </label>
+							{{car.brand}}
+						</li>
+						<li>
+							<label for="">Model: </label>
+							{{car.model}}
+						</li>
+						<li>
+							<label for="">Year: </label>
+							{{car.year}}
+						</li>
+						<li>
+							<label for="">Price: </label>
+							{{car.price}}
+						</li>
+					</ul>
+				</div>
+			</div>
       </div>
 </div>

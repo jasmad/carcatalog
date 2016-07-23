@@ -16,3 +16,17 @@ table.carList{
     }
   }
 }
+
+.car-thumb{
+  .search-comparison{
+      height: 150px;
+      overflow: hidden;
+      input{
+        width: 100%;
+      }
+      .search-car-list{
+        height: 150px;
+        overflow: auto;
+      }
+    }
+}

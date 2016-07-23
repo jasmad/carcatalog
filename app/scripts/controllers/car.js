@@ -14,6 +14,6 @@ angular.module('carCatalogApp')
   		console.log(car);
   		$timeout(function(){
   			$scope.car = car;
-  		})
-  	})
+  		});
+  	});
   });
