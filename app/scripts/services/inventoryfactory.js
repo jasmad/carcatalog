@@ -13,7 +13,7 @@ angular.module('carCatalogApp')
     return {
       getCarList: function () {
         var deferred = $q.defer();
-        $http.get('scripts/data/car-companies.json')
+        $http.get('car-companies.json')
           .success(function(data){
             deferred.resolve(data.cars);
           })
@@ -24,7 +24,7 @@ angular.module('carCatalogApp')
       },
       getCarByCode: function(code){
         var deferred = $q.defer();
-        $http.get('scripts/data/car-companies.json')
+        $http.get('car-companies.json')
           .success(function(data){
             // code: "b05dbf3b-ca13-4c0e-becf-c534c201f1ec"
             var filteredCar = filterFilter(data.cars, {code: "b05dbf3b-ca13-4c0e-becf-c534c201f1ec"});
@@ -45,7 +45,7 @@ angular.module('carCatalogApp')
       },
       getCarsByCodes: function (codes) {
         var deferred = $q.defer();
-        $http.get('scripts/data/car-companies.json')
+        $http.get('car-companies.json')
           .success(function(data){
             // {code: "b05dbf3b-ca13-4c0e-becf-c534c201f1ec"}
             var filteredCar = filterFilter(data.cars, function(car, index, carList){
